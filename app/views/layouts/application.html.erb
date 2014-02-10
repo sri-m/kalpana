@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<!-- Header -->
+	<div id="header">
+		<div class="shell">
+			<!-- Navigation -->
+			<div id="navigation">
+				<%= render :partial => 'memberships/menu' %>
+			</div>		
+			<!-- END Navigation -->
+			<!-- Logo -->
+			<div id="logo">
+				<%= render :partial => 'memberships/logo' %>
+			</div>
+			<div class="cl"></div>
+		</div>	
+	</div>
+	<!-- END Header -->
+	<!-- Slider -->
+	<div id="slider">
+		<%= render :partial => 'memberships/slider' %>
+	</div>
+	<!-- END Slider -->
+	<!-- Main -->
+	<div id="main">
+		<div class="shell">
+			<!-- Content -->
+			<div id="content">
+				<div class="post">
+					<%= render :partial => "memberships/left" %>
+				</div>
+				<div class="post">
+					<h3>Tittle Goes Here Again</h3>
+					<img src="<%= asset_path 'col-img.jpg' %>" alt="Country road leading towards a mountain in the distance" />
+					<%= yield %>
+				</div>
+				<div class="post last">
+					<%= render :partial => "memberships/right" %>
+				</div>				
+				<div class="cl"></div>
+			</div>
+			<!-- END Content -->
+		</div>
+	</div>
+	<!-- END Main -->
+	<!-- Footer -->
+	<div id="footer">
+		<%= render :partial => "memberships/footer" %>
+	</div>
+	<!-- END Bottom Navigation -->
+</body>
+</html>

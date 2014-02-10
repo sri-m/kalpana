@@ -1,0 +1,11 @@
+<table border="1" width="300">
+<% @products.each do |p| %>
+<tr>
+	<td><%= p.name %></td><td><%= p.email %></td><td><%= link_to "Show", p %></td><td><%= link_to "edit", edit_product_path(p) %></td>
+	 <td><%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>	
+<% end %>
+</table>
+
+
+<%#= @myname %>
